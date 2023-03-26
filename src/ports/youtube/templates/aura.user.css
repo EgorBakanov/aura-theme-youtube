@@ -1,0 +1,121 @@
+/* ==UserStyle==
+@name           Aura Theme
+@namespace      https://github.com/daltonmenezes/aura-theme
+@version        1.0.0
+@description    A beautiful dark theme for Youtube
+@supportURL     https://github.com/daltonmenezes/aura-theme/issues
+@license        MIT
+==/UserStyle== */
+
+@-moz-document domain("youtube.com") {
+  html {
+    --black: #15141b;
+    --darker-black: #110f18;
+    --white: #edecee;
+    --gray: #6d6d6d;
+    --purple: #a277ff;
+    --purple-fading: #3d375e7f;
+    --green: #61ffca;
+    --orange: #ffca85;
+    --pink: #f694ff;
+    --blue: #82e2ff;
+    --red: #ff6767;
+
+    --background-color: var(--black);
+    --background-secondary-color: var(--darker-black);
+    --foreground-color: var(--white);
+    --muted-color: var(--gray);
+    --selection-color: var(--purple-fading);
+    --primary-color: var(--purple);
+    --secondary-color: var(--green);
+    --tertiary-color: var(--orange);
+    --quaternary-color: var(--pink);
+    --quinary-color: var(--blue);
+    --senary-color: var(--red);
+
+    --warning-color: var(--orange);
+    --success-color: var(--green);
+    --error-color: var(--red);
+  }
+
+  html:not(.style-scope)[dark],
+  :not(.style-scope)[dark] {
+    --yt-spec-base-background: var(--background-color);
+    --yt-spec-text-primary: var(--foreground-color);
+    --yt-spec-text-secondary: var(--muted-color);
+    --yt-endpoint-hover-color: var(--tertiary-color);
+    --yt-endpoint-visited-color: var(--quaternary-color);
+    --yt-endpoint-color: var(--tertiary-color);
+    --ytd-metadata-line-color: var(--secondary-color);
+    --yt-spec-icon-active-other: var(--primary-color);
+    --yt-spec-outline: var(--selection-color);
+    --yt-spec-icon-disabled: var(--primary-color);
+    --iron-icon-fill-color: var(--primary-color);
+    --yt-spec-call-to-action: var(--primary-color);
+    --yt-spec-brand-icon-acive: var(--secondary-color);
+    --yt-spec-badge-chip-background: var(--selection-color);
+    --yt-spec-additive-background: var(--selection-color);
+    --yt-spec-general-background-a: var(--background-color);
+    --yt-spec-button-chip-background-hover: var(--primary-color);
+    --yt-spec-10-percent-layer: var(--selection-color);
+    --yt-spec-static-overlay-button-secondary: var(--selection-color);
+    --yt-spec-static-overlay-background-brand: var(--red);
+
+    --yt-spec-static-brand-white: var(--white);
+    --yt-spec-static-brand-black: var(--darker-black);
+    --yt-spec-static-overlay-background-heavy: var(--darker-black);
+    --yt-spec-themed-blue: var(--green);
+
+    --ytd-searchbox-border-color: var(--primary-color);
+    --ytd-searchbox-legacy-button-hover-color: var(--selection-color);
+    --ytd-searchbox-legacy-button-focus-color: var(--selection-color);
+    --ytd-searchbox-legacy-button-border-color: var(--primary-color);
+    --ytd-searchbox-legacy-button-hover-border-color: var(--secondary-color);
+    --ytd-searchbox-legacy-border-color: var(--primary-color);
+    --ytd-searchbox-text-color: var(--primary-color);
+  }
+
+  ytd-masthead,
+  ytd-app[darker-dark-theme] #guide-content.ytd-app {
+    background-color: var(--background-secondary-color);
+  }
+
+  #guide-section-title.ytd-guide-section-renderer {
+    --yt-spec-text-primary: var(--primary-color);
+  }
+
+  ytd-searchbox[has-focus] #container.ytd-searchbox {
+    border-color: var(--secondary-color);
+  }
+
+  ytd-guide-entry-renderer[active] .title.ytd-guide-entry-renderer,
+  #country-code.ytd-topbar-logo-renderer {
+    color: var(--secondary-color);
+  }
+
+  yt-formatted-string[has-link-only_]:not([force-default-style])
+    a.yt-simple-endpoint.yt-formatted-string {
+    color: var(--tertiary-color);
+  }
+
+  yt-formatted-string[has-link-only_]:not([force-default-style])
+    a.yt-simple-endpoint.yt-formatted-string:visited {
+    color: var(--quaternary-color);
+  }
+
+  #progress.ytd-thumbnail-overlay-resume-playback-renderer,
+  #notification-count.ytd-notification-topbar-button-renderer {
+    background-color: var(--primary-color);
+  }
+
+  .yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--text:hover,
+  #buttons.ytd-masthead > *.ytd-masthead:not(:last-child):hover,
+  yt-chip-cloud-chip-renderer[modern-chips][chip-style]:hover {
+    border: 1px solid var(--secondary-color);
+  }
+
+  #buttons.ytd-masthead > *.ytd-masthead:not(:last-child),
+  yt-chip-cloud-chip-renderer[modern-chips][chip-style] {
+    border: 1px solid transparent;
+  }
+}
